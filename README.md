@@ -1,2 +1,2 @@
 # Ecommerce-App
-### An app built using ExpressJS 
+### A web app built using ExpressJS which uses JSON file for database
