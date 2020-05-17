@@ -1,13 +1,16 @@
 # Ecommerce-App
-### A web app built using ExpressJS which uses JSON file for data management
+## A web app built using ExpressJS which uses JSON file for data management
 
-## App uses templating structure rather than any frontend framework
-## Why ???
-## Best question and answer to understand this taken from Stack Overflow [https://stackoverflow.com/questions/51947023/is-there-any-need-of-learning-views-and-template-engines-in-express-when-we-have]
+### App uses templating structure rather than any frontend framework
+### Why ???
+### Best question and answer to understand this taken from Stack Overflow 
+[https://stackoverflow.com/questions/51947023/is-there-any-need-of-learning-views-and-template-engines-in-express-when-we-have]
 
 
-## Qusetion :  Is there any need of learning views and template engines in express when we have already learn angular in the MEAN Stack ?
-## Answer : In order to answer your question, let me explain what is angular and what are template engines in express?
+### Question :  
+Is there any need of learning views and template engines in express when we have already learn angular in the MEAN Stack ?
+### Answer :
+In order to answer your question, let me explain what is angular and what are template engines in express?
 
 What is Angular?
 Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop.
