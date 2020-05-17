@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use(express.static('public')); //make everthing available in public folder to the outside world
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
@@ -14,6 +16,7 @@ app.use(
 );
 
 app.use(authRouter);
+
 
 //const bodyParser = (req, res, next) => {
 //  if (req.method == "POST") {
