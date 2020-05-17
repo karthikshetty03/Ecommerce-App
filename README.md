@@ -1,5 +1,5 @@
 # Ecommerce-App
-## A web app built using ExpressJS which uses JSON file for data management
+## A web app built using ExpressJS which uses JSON file for data management and SHA256 hashing algorithm with salting for secure storage of user passwords.
 
 ### App uses templating structure rather than any frontend framework
 ### Why ???
