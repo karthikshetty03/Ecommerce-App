@@ -55,32 +55,33 @@ app.get("/signin", (req, res) => [
   `),
 ]);
 
-app.post('/signin', async (req, res)=> {
-
+app.post("/signin", async (req, res) => {
   console.log(req.body);
-  const {email, pass} = req.body;
-  const user = await UsersRepo.getOneBy({email});
+  const { email, pass } = req.body;
+  const user = await UsersRepo.getOneBy({ email });
 
-  if(!user) {
+  if (!user) {
     res.send("email not found");
   }
 
-  if(user.pass !== pass) {
+  const validPassword = await UsersRepo.comparePasswords(user.pass, pass);
+
+  if (!validPassword) {
     res.send("Invalid password");
   }
 
   req.session.userId = user.id;
-  res.send('Signed in successfully');
-})
+  res.send("Signed in successfully");
+});
 
-app.get('/signout', (req, res) => {
+app.get("/signout", (req, res) => {
   req.session = null;
   res.send("You are logged out");
-})
+});
 
 app.post("/signup", async (req, res) => {
   const { email, pass, passconf } = req.body;
-  if(!email || !pass || !passconf) {
+  if (!email || !pass || !passconf) {
     return res.send("All fields must be filled");
   }
 
