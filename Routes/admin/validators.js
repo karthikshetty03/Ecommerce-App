@@ -2,6 +2,9 @@ const { check } = require("express-validator");
 const UsersRepo = require("../../Repositories/users");
 
 module.exports = {
+  requireTitle: check("title").trim().isLength({ min: 5, max: 50 }),
+  requirePrice: check("price").trim().toFloat().isFloat({ min: 1 }),
+
   requireEmail: check("email")
     .trim()
     .normalizeEmail()
@@ -60,9 +63,8 @@ module.exports = {
 
       if (!validPassword) {
         throw new Error("Invalid password");
+      } else {
+        return true;
       }
-     else {
-       return true;
-     }
     }),
 };

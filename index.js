@@ -1,11 +1,12 @@
 const express = require("express");
 const authRouter = require("./Routes/admin/auth");
+const productsRouter = require("./Routes/admin/products");
 const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(express.static('public')); //make everthing available in public folder to the outside world
+app.use(express.static("public")); //make everthing available in public folder to the outside world
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -16,7 +17,7 @@ app.use(
 );
 
 app.use(authRouter);
-
+app.use(productsRouter);
 
 //const bodyParser = (req, res, next) => {
 //  if (req.method == "POST") {
