@@ -3,7 +3,7 @@
 
 ### App uses templating structure rather than any frontend framework
 ### Why ???
-### Best question and answer to understand this taken from (Stack Overflow)[https://stackoverflow.com/questions/51947023/is-there-any-need-of-learning-views-and-template-engines-in-express-when-we-have]
+### Best question and answer to understand this taken from [Stack Overflow](https://stackoverflow.com/questions/51947023/is-there-any-need-of-learning-views-and-template-engines-in-express-when-we-have)
 
 
 ### Question :  
