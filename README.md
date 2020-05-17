@@ -19,8 +19,7 @@ A template engine enables you to use static template files in your application. 
 
 Some popular template engines that work with Express are Pug, Mustache, and EJS. The Express application generator uses Jade as its default, but it also supports several others.
 
-So,
-
+### Conclusion :
 Angular is a framework with a templating component baked in. You use it to create Single page Web Applications which means that DOM modification is happening on the client side and the app exchange with server only data. If your concern is template it is plain HTML.
 
 Whereas, template engines' rendered views are sent to client each time by server whenever request is made each time a new page is rendered on server and sent to the client which is Great for static sites but not for rich site interactions.
