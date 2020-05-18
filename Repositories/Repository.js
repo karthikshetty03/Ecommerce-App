@@ -36,7 +36,7 @@ module.exports = class Repository {
     );
   }
 
-  async updateOne(id, attrs) {
+  async update(id, attrs) {
     const records = await this.getAll();
     const record = records.find((record) => record.id === id);
 
