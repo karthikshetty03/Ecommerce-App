@@ -2,6 +2,7 @@ const express = require("express");
 const authRouter = require("./Routes/admin/auth");
 const adminproductsRouter = require("./Routes/admin/products");
 const productsRouter = require('./Routes/products')
+const cartsRouter = require('./Routes/carts');
 const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
 
@@ -20,6 +21,7 @@ app.use(
 app.use(authRouter);
 app.use(adminproductsRouter);
 app.use(productsRouter);
+app.use(cartsRouter);
 
 //const bodyParser = (req, res, next) => {
 //  if (req.method == "POST") {
