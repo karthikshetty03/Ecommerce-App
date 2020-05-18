@@ -2,12 +2,17 @@ const productsRepo = require("../../Repositories/products");
 const express = require("express");
 const multer = require("multer");
 const productsNewTemplate = require("../../views/admin/products/new");
+const productsIndexTemplate = require('../../views/admin/products/index');
 const { requireTitle, requirePrice } = require("./validators");
 const { handleErrors } = require("./middlewares");
 const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
-router.get("/admin/products", (req, res) => {});
+router.get("/admin/products", async (req, res) => {
+  const products = await productsRepo.getAll();
+  //console.log(products);
+  res.send(productsIndexTemplate({products}));
+});
 
 router.get("/admin/products/new", (req, res) => {
   res.send(productsNewTemplate({}));
@@ -22,7 +27,7 @@ router.post(
     const image = req.file.buffer.toString("base64");
     const { title, price } = req.body;
     await productsRepo.create({ price, title, image });
-    res.send("Submitted");
+    res.redirect('/admin/products');
   }
 );
 

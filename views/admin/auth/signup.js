@@ -16,15 +16,15 @@ module.exports = ({ req, errors }) => {
               </div>
               <div class="field">
                 <label class="label">Password</label>
-                <input required class="input" placeholder="Password" name="password" type="password" />
-                <p class="help is-danger">${getError(errors, "password")}</p>
+                <input required class="input" placeholder="passconf" name="pass" type="password" />
+                <p class="help is-danger">${getError(errors, "pass")}</p>
               </div>
               <div class="field">
                 <label class="label">Password Confirmation</label>
-                <input required class="input" placeholder="Password Confirmation" name="passwordConfirmation" type="password" />
+                <input required class="input" placeholder="passconf" name="passconf" type="password" />
                 <p class="help is-danger">${getError(
                   errors,
-                  "passwordConfirmation"
+                  "passconf"
                 )}</p>
               </div>
               <button class="button is-primary">Submit</button>

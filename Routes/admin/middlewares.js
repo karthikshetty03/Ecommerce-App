@@ -5,7 +5,8 @@ module.exports = {
     return (req, res, next) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        res.send(templateFunc({ errors }));
+        console.log(errors);
+        return res.send(templateFunc({ errors }));
       }
       next();
     };

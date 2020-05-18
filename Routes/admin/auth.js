@@ -24,12 +24,12 @@ router.get("/signup", (req, res) => {
 router.post(
   "/signup",
   [requireEmail, requirePass, requirePassconf],
-  handleErrors(signinTemplate),
+  handleErrors(signupTemplate),
   async (req, res) => {
     const { email, pass } = req.body;
     const user = await UsersRepo.create({ email, pass });
     req.session.userId = user.id;
-    res.send(`Account created with email ${email}`);
+    res.redirect("/admin/products");
   }
 );
 
@@ -47,7 +47,7 @@ router.post(
     const { email } = req.body;
     const user = await UsersRepo.getOneBy({ email });
     req.session.userId = user.id;
-    res.send("Signed in successfully");
+    res.redirect("/admin/products");
   }
 );
 
