@@ -1,6 +1,6 @@
 # Ecommerce-App
 ## A web app built using ExpressJS which uses JSON file for data management and SHA-2 hashing algorithm with salting for secure storage of user passwords for admin side.
-## Has user shopping functionality without logging in (User Login is not yet implemented) where users can browse through products listed by admin and can add products to a cart and the cart information is stored using cookie session so that user can login afterwards and make payment. 
+## Has user shopping functionality without logging in where users can browse through products listed by admin and can add products to a cart and the cart information is stored using cookie session so that user can login afterwards and make payment. 
 
 
 
